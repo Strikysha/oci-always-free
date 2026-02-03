@@ -1,0 +1,41 @@
+# The OCID of your Oracle Cloud Infrastructure tenancy.
+# Found in the OCI console under "Administration" -> "Tenancy Details".
+tenancy_ocid = "ocid1.tenancy.oc1..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# The OCID of the user who will be authenticating with OCI.
+# Found in the OCI console under "Identity" -> "Users".
+user_ocid = "ocid1.user.oc1..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# The fingerprint of the public key for API authentication.
+# You can get this by uploading the public key to the OCI console for your user.
+fingerprint = "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+
+# The local path to your OCI API private key file.
+# This key should correspond to the public key whose fingerprint is given above.
+private_key_path = "/path/to/your/private_key.pem"
+
+# The public SSH key you want to use for connecting to the compute instances.
+# If you leave this empty, a new key pair will be generated.
+# e.g., "ssh-rsa AAAA..."
+ssh_public_key = ""
+
+# The OCID of the compartment where the resources will be created.
+# If this is the root compartment, it will be the same as your tenancy_ocid.
+compartment_ocid = "ocid1.compartment.oc1..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# The OCI region to create the resources in.
+# e.g., "us-ashburn-1", "eu-frankfurt-1"
+region = "eu-frankfurt-1"
+
+# The shape for the Ampere A1 or AMD E2 micro instance.
+# Ampere: VM.Standard.A1.Flex
+# AMD: VM.Standard.E2.1.Micro
+# instance_shape = "VM.Standard.E2.1.Micro"
+
+# OCPUs for the instance.
+# For free tier, use 1 for E2.1.Micro or up to 4 for A1.Flex.
+# instance_ocpus = 1
+
+# Memory in GBs for the instance.
+# For free tier, use 1 for E2.1.Micro or up to 24 for A1.Flex.
+# instance_shape_config_memory_in_gbs = 1

@@ -1,0 +1,22 @@
+# Local Terraform files
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+
+# Private keys
+*.pem
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Ignore .terraform directories
+.terraform/
+
+# Ignore for Windows
+.DS_Store
+Thumbs.db
+
+# VSCode specific
+.vscode/
