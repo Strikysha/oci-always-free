@@ -16,15 +16,15 @@ variable "fingerprint" {
   description = "The fingerprint of the API key."
 }
 
-variable "private_key_path" {
+variable "private_key" {
   type        = string
-  description = "The path to the private key file."
+  description = "The PRIVATE KEY content (PEM). Provide this as a sensitive variable in Terraform Cloud or via TF_VAR_private_key. Do NOT commit private keys to the repo."
+  sensitive   = true
 }
 
 variable "ssh_public_key" {
   type        = string
-  description = "The public SSH key to be used for the instances."
-  default     = ""
+  description = "The public SSH key to be used for the instances. Provide this interactively or as a Terraform variable."
 }
 
 variable "compartment_ocid" {
