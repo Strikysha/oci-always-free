@@ -1,9 +1,10 @@
-# terraform {
-#   cloud {
-#     organization = "Strikysha_org"
+terraform {
+  cloud {
+    # Replace YOUR_TFC_ORG with your Terraform Cloud organization name
+    organization = "Strikysha_org"
 
-#     workspaces {
-#       name = "oracle_cloud_free"
-#     }
-#   }
-# }
+    workspaces {
+      name = "oci-always-free"
+    }
+  }
+}
